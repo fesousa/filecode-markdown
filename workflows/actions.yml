@@ -8,6 +8,12 @@ on:
 
   workflow_dispatch:
 
+inputs:
+  owner:
+    required: true
+  repo:
+    required: true
+
 jobs:
   readme_code:
     runs-on: ubuntu-latest
@@ -16,8 +22,10 @@ jobs:
       - name: Run a one-line script
         run: |
           git config --global user.email "fernandosousa.ti@gmail.com"
-          git config --global user.name "Fernando Sousa|Actions"          
-          python3 .github/workflows/readme_code.py
+          git config --global user.name "Fernando Sousa|Actions"
+          git clone https://github.com/${{inputs.owner}}/${{inputs.repo}}.git       
+          python3 .github/workflows/readme_code.py ${{inputs.repo}}
+          cd ${{inputs.repo}}
           git add README.md
           git commit -m 'alteração readme'
           git push origin master
