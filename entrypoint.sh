@@ -1,7 +1,6 @@
 git config --global user.email "fernandosousa.ti@gmail.com"
 git config --global user.name "Fernando Sousa|Actions"
 cd ..
-cd ..
 ls
 python3 /readme_code.py
 git add README.md
