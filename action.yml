@@ -11,6 +11,12 @@ inputs:
   access_token:
     description: 'access token'
     required: true
+  email:
+    description: 'email'
+    required: true
+  user:
+    description: 'user'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
