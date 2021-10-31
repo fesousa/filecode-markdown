@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM python:3.7
 
 RUN apt update
 RUN apt install -y git
