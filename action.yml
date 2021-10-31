@@ -1,17 +1,12 @@
 name: README_CODE
-
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
-  workflow_dispatch:
-
+description: 'Action para incluir bloco de código no markdown'
+author: 'Fernando Sousa'
 inputs:
   owner:
+    description: 'repo owner'
     required: true
   repo:
+    description: 'repo'
     required: true
 
 jobs:
@@ -29,3 +24,6 @@ jobs:
           git add README.md
           git commit -m 'alteração readme'
           git push origin master
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
