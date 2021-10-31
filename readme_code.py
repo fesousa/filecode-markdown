@@ -1,6 +1,6 @@
 import re
 import sys
-with open(f'{sys.argv[1]}/README.template.md', 'r') as readme:
+with open(f'~/README.template.md', 'r') as readme:
     content = readme.read()
     subs = re.findall(r'```.*?\n(\$\{.*?\})\n```', content)
     for s in subs:
@@ -9,5 +9,5 @@ with open(f'{sys.argv[1]}/README.template.md', 'r') as readme:
         with open(file) as f:
             content = content.replace(s, f.read())
     
-with open(f'{sys.argv[1]}/README.md', 'w') as readme:    
+with open(f'~/README.md', 'w') as readme:    
     readme.write(content)
