@@ -1,4 +1,5 @@
 import re
+import sys
 with open(f'{sys.argv[1]}/README.template.md', 'r') as readme:
     content = readme.read()
     subs = re.findall(r'```.*?\n(\$\{.*?\})\n```', content)
