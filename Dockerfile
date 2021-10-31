@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt update
-RUN apt install git
+RUN apt install -y git
 
 COPY entrypoint.sh /entrypoint.sh
 COPY readme_code.py /readme_code.py
