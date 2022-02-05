@@ -11,3 +11,4 @@ with open(f'/github/workspace/README.template.md', 'r') as readme:
     
 with open(f'/github/workspace/README.md', 'w') as readme:    
     readme.write(content)
+    readme.write(f"\nLast update: {datetime.now.strftime('%Y-%m-%d')}")
