@@ -1,7 +1,7 @@
 import re
 import sys
 from datetime import datetime
-with open(f'/github/workspace/README.md', 'r') as readme:
+with open(f'/github/workspace/README.template.md', 'r') as readme:
     content = readme.read()
     subs = re.findall(r'```.*?\n(\$\{.*?\})\n```', content)
     for s in subs:
