@@ -4,5 +4,5 @@ pwd
 python3 /readme_code.py
 git add README.md
 MSG="$(git show -s --format=%s)"
-git commit -m '$MSG'
+git commit -m "$MSG"
 git push origin master
