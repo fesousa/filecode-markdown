@@ -9,7 +9,7 @@ with open(f'/github/workspace/README.md', 'r') as readme:
         print(file)
         with open(file) as f:
             content = content.replace(s, f.read())
-    content = content.replace("{{update}}", f"\nLast update: {datetime.now().strftime('%Y-%m-%d %H:%M-%S')}")
+    content = content.replace("{{update}}", f"\nLast update: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     
 with open(f'/github/workspace/README.md', 'w') as readme:    
     readme.write(content)
