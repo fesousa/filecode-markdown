@@ -1,9 +1,8 @@
 import re
-import sys
 from datetime import datetime
-with open(f'/github/workspace//template/README.template.md', 'r') as readme:
+with open(f'/github/workspace/template/README.template.md', 'r') as readme:
     content = readme.read()
-    subs = re.findall(r'```.*?\n(\$\{.*?\})\n```', content)
+    subs = re.findall(r'\s{0,12}```.*?\n(\$\{.*?\})\n\s{0,12}```', content)
     for s in subs:
         file = s[2:-1]
         print(file)
